@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class StudentDetail extends StatefulWidget {
@@ -9,7 +10,6 @@ class StudentDetail extends StatefulWidget {
 }
 
 class Students extends State<StudentDetail> {
-  Students({key: key, title: this.title});
   static var _status = {"successed", "failed"};
 
   TextEditingController studentName = new TextEditingController();
@@ -17,7 +17,7 @@ class Students extends State<StudentDetail> {
 
   @override
   Widget build(BuildContext context) {
-    TextStyle textStyle = Theme.of(context).textTheme.title;
+    TextStyle textStyle = TextStyle();
 
     // TODO: implement build
     return Scaffold(
