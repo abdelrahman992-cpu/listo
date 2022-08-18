@@ -1,41 +1,32 @@
 import 'package:flutter/material.dart';
+import 'students_list.dart';
+import 'student_detail.dart';
 
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      // Application name
-      title: 'Flutter Hello World',
-      // Application theme data, you can set the colors for the application as
-      // you want
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      // A widget which will be started on application startup
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
+void main() {
+  runApp(MyApp());
 }
 
-class MyHomePage extends StatelessWidget {
-  final String title;
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        // The title text which will be shown on the action bar
-        title: Text(title),
-      ),
-      body: Center(
-        child: Text(
-          'Hello, World!',
+    // TODO: implement build
+    return MaterialApp(
+      title: "Students List",
+      debugShowCheckedModeBanner: false,
+      
+      theme:ThemeData(// يغير في كل صفحات التطبيق
+        
+        primaryColor:Colors.blue,
+        buttonColor:Colors.blue,
+        textTheme:TextTheme(
+        headline6:TextStyle(
+          fontSize:20                             ,
+          color:Colors.white
+          )
+        )                          
         ),
-      ),
+   ,
+      home: StudentDetail(),
     );
   }
 }
